@@ -30,8 +30,13 @@ export class ConexionService {
     this.itemsCollection.add(item);
   }
 
-  deleteItem(item){
-    this.itemDoc = this.afs.doc<Item>(`items/${item.id}`);
+  deleteItem(id){
+    this.itemDoc = this.afs.doc<Item>(`items/${id}`);
     this.itemDoc.delete();
+  }
+
+  updateItem(item){
+    this.itemDoc = this.afs.doc<Item>(`items/${item.id}`);
+    this.itemDoc.update(item);
   }
 }
