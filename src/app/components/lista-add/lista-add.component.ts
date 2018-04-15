@@ -8,7 +8,7 @@ import { NgModel } from '@angular/forms';
   styleUrls: ['./lista-add.component.css']
 })
 export class ListaAddComponent implements OnInit {
-
+  name:any;
   item:any = {name:''}
   constructor(private servicio:ConexionService) { }
 

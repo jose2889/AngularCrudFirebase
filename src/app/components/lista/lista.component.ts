@@ -8,6 +8,7 @@ import { ConexionService } from '../../services/conexion.service';
 })
 export class ListaComponent implements OnInit {
 
+  name:any;
   items:any;
   editarItem:any = {
     name:''
